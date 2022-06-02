@@ -1,5 +1,5 @@
-#Mi link de Heroku es el siguiente: https://anthonny-web-101.herokuapp.com
 from flask import Flask, request, jsonify
+
 app = Flask(__name__)
 @app.route ('/')
 def index():
@@ -99,6 +99,6 @@ def lista_materias(ciclo=None):
         </li> """ %(cadena, i)
         mensaje = "%s</ul>" % (cadena)
     return f"""{mensaje}"""
-if __name__== '__main__':
-    app.run(threaded=True, port=5000)
-#Mi link de Heroku es el siguiente: https://anthonny-web-101.herokuapp.com
+
+if __name__ == "__main__":
+    app.run(debug=True)
